@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RF — Dados para pagamento</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#4b7bec">
+<meta name="description" content="Cartão interativo com dados para pagamento — RF">
+<style>
+  :root{--bg:#f6f7fb;--fg:#111;--card:#fff;--line:#efeff4;--btn:#4b7bec;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+  .wrap{max-width:840px;margin:18px auto;padding:0 14px}
+  .card{background:var(--card);border-radius:14px;box-shadow:0 8px 28px rgba(15,15,15,.08);padding:16px 14px;margin:12px 0}
+  h1{font-size:22px;margin:2px 6px 10px 6px}
+  h2{font-size:16px;margin:10px 6px 6px 6px}
+  .row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border-top:1px solid var(--line);padding:10px 6px}
+  .row:first-of-type{border-top:none}
+  .label{font-size:14px;color:#333}
+  .controls{display:flex;gap:8px;align-items:center}
+  input.val{width:100%;font-size:15px;padding:10px 10px;border:1px solid var(--line);border-radius:10px;background:#fafbff}
+  button.copy{background:var(--btn);color:#fff;border:none;padding:9px 12px;border-radius:10px;font-weight:600;white-space:nowrap;cursor:pointer}
+  .hint{font-size:12px;color:#666;margin:6px 6px 0 6px}
+  .groupbtns{display:flex;gap:8px;flex-wrap:wrap;margin:8px 6px 6px 6px}
+  .small{font-size:12px;color:#777;text-align:center;margin:10px 0 6px 0}
+  footer{font-size:12px;color:#777;text-align:center;margin:8px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>💳 RF — Dados para pagamento</h1>
+    <div class="hint">Toque em "Copiar" para copiar. Se o navegador bloquear, toque no campo para selecionar e use "Copiar".</div>
+  </div>
+
+  <div class="card">
+    <h2>PIX / Chaves</h2>
+    <div class="row">
+      <div>
+        <div class="label">PIX (CPF) — Pessoa Física</div>
+        <input id="pix_fis" class="val" value="01363714422" readonly onclick="this.select()">
+      </div>
+      <div class="controls"><button class="copy" data-for="pix_fis">Copiar</button></div>
+    </div>
+    <div class="row">
+      <div>
+        <div class="label">PIX (CNPJ) — Pessoa Jurídica</div>
+        <input id="pix_jur" class="val" value="15439659000116" readonly onclick="this.select()">
+      </div>
+      <div class="controls"><button class="copy" data-for="pix_jur">Copiar</button></div>
+    </div>
+    <div class="groupbtns">
+      <button class="copy" data-block="pix_fis,pix_jur">Copiar bloco: PIX</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Pessoa Física</h2>
+    <div class="row"><div><div class="label">Banco</div><input id="pf_banco" class="val" value="Nu Pagamentos S.A. (0260)" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="pf_banco">Copiar</button></div></div>
+    <div class="row"><div><div class="label">Agência</div><input id="pf_ag" class="val" value="0001" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="pf_ag">Copiar</button></div></div>
+    <div class="row"><div><div class="label">Conta</div><input id="pf_cc" class="val" value="6759278-3" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="pf_cc">Copiar</button></div></div>
+    <div class="row"><div><div class="label">Titular</div><input id="pf_nome" class="val" value="Renata Falcão" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="pf_nome">Copiar</button></div></div>
+    <div class="groupbtns">
+      <button class="copy" data-block="pf_banco,pf_ag,pf_cc,pf_nome">Copiar bloco: Pessoa Física</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Pessoa Jurídica — RF Entretenimento LTDA</h2>
+    <div class="row"><div><div class="label">Banco</div><input id="pj_banco" class="val" value="Nu Pagamentos S.A. (0260)" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="pj_banco">Copiar</button></div></div>
+    <div class="row"><div><div class="label">Agência</div><input id="pj_ag" class="val" value="0001" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="pj_ag">Copiar</button></div></div>
+    <div class="row"><div><div class="label">Conta</div><input id="pj_cc" class="val" value="31455303-8" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="pj_cc">Copiar</button></div></div>
+    <div class="row"><div><div class="label">Titular</div><input id="pj_nome" class="val" value="RF Entretenimento LTDA" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="pj_nome">Copiar</button></div></div>
+    <div class="groupbtns">
+      <button class="copy" data-block="pj_banco,pj_ag,pj_cc,pj_nome">Copiar bloco: Pessoa Jurídica</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Caixa Econômica</h2>
+    <div class="row"><div><div class="label">Conta Corrente</div><input id="cx_cc" class="val" value="Ag. 0560 — Cc. 577312667-9" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="cx_cc">Copiar</button></div></div>
+    <div class="row"><div><div class="label">Poupança (Principal)</div><input id="cx_p1" class="val" value="Ag. 0560 Op.1288 Cc. 797464761-3" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="cx_p1">Copiar</button></div></div>
+    <div class="row"><div><div class="label">Poupança 2</div><input id="cx_p2" class="val" value="Ag. 0560 Op.1288 Cc. 805888612-0" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="cx_p2">Copiar</button></div></div>
+    <div class="row"><div><div class="label">Conta Jurídica</div><input id="cx_j" class="val" value="Ag. 0560 Op.3702 Cc. 739002997-9" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="cx_j">Copiar</button></div></div>
+    <div class="groupbtns">
+      <button class="copy" data-block="cx_cc,cx_p1,cx_p2,cx_j">Copiar bloco: Caixa</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Banco do Brasil</h2>
+    <div class="row"><div><div class="label">Agência / Conta</div><input id="bb" class="val" value="Ag. 36-1 — Cc. 92711-2" readonly onclick="this.select()"></div><div class="controls"><button class="copy" data-for="bb">Copiar</button></div></div>
+  </div>
+
+  <div class="card">
+    <div class="groupbtns"><button class="copy" id="copy_all">Copiar tudo</button></div>
+    <div class="small">Funciona em celular e desktop. Se o botão não funcionar, toque no campo e use “Copiar”.</div>
+  </div>
+
+  <footer>RF • Cartão interativo de dados para pagamento</footer>
+</div>
+
+<script>
+async function fallbackCopy(text){
+  try{
+    const ta=document.createElement('textarea');
+    ta.value=text; ta.style.position='fixed'; ta.style.left='-9999px';
+    document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+    return true;
+  }catch(e){ return false; }
+}
+async function copyText(text){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    try{ await navigator.clipboard.writeText(text); return true; }catch(e){ return await fallbackCopy(text); }
+  }
+  return await fallbackCopy(text);
+}
+function btnOK(btn,labelOK,orig){
+  btn.textContent=labelOK; btn.disabled=true;
+  setTimeout(()=>{btn.textContent=orig; btn.disabled=false;},1200);
+}
+document.querySelectorAll('button.copy[data-for]').forEach(btn=>{
+  btn.addEventListener('click', async ()=>{
+    const id=btn.getAttribute('data-for');
+    const el=document.getElementById(id);
+    const val=el.value;
+    await copyText(val);
+    btnOK(btn,'Copiado ✓','Copiar');
+  });
+});
+document.querySelectorAll('button.copy[data-block]').forEach(btn=>{
+  btn.addEventListener('click', async ()=>{
+    const ids=btn.getAttribute('data-block').split(',');
+    const val=ids.map(id=>document.getElementById(id).value).join(' | ');
+    await copyText(val);
+    btnOK(btn,'Copiado ✓', btn.textContent);
+  });
+});
+document.getElementById('copy_all').addEventListener('click', async (e)=>{
+  const allValues=[...document.querySelectorAll('input.val')].map(el=>el.value).join('\n');
+  await copyText(allValues);
+  btnOK(e.target,'Copiado ✓','Copiar tudo');
+});
+</script>
+</body>
+</html>
