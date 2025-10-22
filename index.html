@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>💳 RF — Dados para Pagamento</title>
+<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#7A67FF">
+<meta property="og:title" content="RF — Dados Bancários">
+<meta property="og:description" content="Dados bancários e PIX oficiais de Renata Falcão. Toque para copiar.">
+<meta property="og:image" content="assets/og-image.png">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="logo" src="assets/rf-logo.png" alt="RF">
+    <h1>RF — Dados para Pagamento</h1>
+    <div class="subtitle">Toque em “Copiar” para copiar. Se o navegador bloquear, toque no campo para selecionar e use “Copiar”.</div>
+  </header>
+
+  <!-- PIX -->
+  <div class="card">
+    <h2>PIX / Chaves</h2>
+    <div class="row">
+      <div class="label">PIX (CPF) — Pessoa Física</div>
+      <div class="value" id="pixpf">01363714422</div>
+      <div class="actions"><button class="pill" data-target="pixpf">Copiar</button></div>
+    </div>
+    <div class="row">
+      <div class="label">PIX (CNPJ) — Pessoa Jurídica</div>
+      <div class="value" id="pixpj">15439659000116</div>
+      <div class="actions"><button class="pill" data-target="pixpj">Copiar</button></div>
+    </div>
+    <div class="group"><button class="pill" id="copy_pix">Copiar bloco: PIX</button></div>
+  </div>
+
+  <!-- PJ 1 -->
+  <div class="card">
+    <h2>Pessoa Jurídica — RF Entretenimento LTDA</h2>
+    <div class="row"><div class="label">Banco</div><div class="value" id="p1b">Nu Pagamentos S.A. (0260)</div><div class="actions"><button class="pill" data-target="p1b">Copiar</button></div></div>
+    <div class="row"><div class="label">Agência</div><div class="value" id="p1a">0001</div><div class="actions"><button class="pill" data-target="p1a">Copiar</button></div></div>
+    <div class="row"><div class="label">Conta</div><div class="value" id="p1c">31455303-8</div><div class="actions"><button class="pill" data-target="p1c">Copiar</button></div></div>
+    <div class="row"><div class="label">PIX (CNPJ)</div><div class="value" id="p1x">15.439.659/0001-16</div><div class="actions"><button class="pill" data-target="p1x">Copiar</button></div></div>
+  </div>
+
+  <!-- PJ 2 -->
+  <div class="card">
+    <h2>Pessoa Jurídica — RF EMPRESA</h2>
+    <div class="row"><div class="label">Banco</div><div class="value" id="p2b">Caixa Econômica Federal</div><div class="actions"><button class="pill" data-target="p2b">Copiar</button></div></div>
+    <div class="row"><div class="label">Agência</div><div class="value" id="p2a">0560</div><div class="actions"><button class="pill" data-target="p2a">Copiar</button></div></div>
+    <div class="row"><div class="label">Conta Corrente</div><div class="value" id="p2c">739002997-9</div><div class="actions"><button class="pill" data-target="p2c">Copiar</button></div></div>
+  </div>
+
+  <!-- PF Nubank -->
+  <div class="card">
+    <h2>Pessoa Física — Renata Falcão</h2>
+    <div class="row"><div class="label">Banco</div><div class="value" id="f1b">Nu Pagamentos S.A. (0260)</div><div class="actions"><button class="pill" data-target="f1b">Copiar</button></div></div>
+    <div class="row"><div class="label">Agência</div><div class="value" id="f1a">0001</div><div class="actions"><button class="pill" data-target="f1a">Copiar</button></div></div>
+    <div class="row"><div class="label">Conta</div><div class="value" id="f1c">6759278-3</div><div class="actions"><button class="pill" data-target="f1c">Copiar</button></div></div>
+    <div class="row"><div class="label">PIX (CPF)</div><div class="value" id="f1x">013.637.144-22</div><div class="actions"><button class="pill" data-target="f1x">Copiar</button></div></div>
+  </div>
+
+  <!-- PF Caixa -->
+  <div class="card">
+    <h2>Pessoa Física — Caixa Econômica Federal (Poupança)</h2>
+    <div class="row"><div class="label">Banco</div><div class="value" id="f2b">Caixa Econômica Federal</div><div class="actions"><button class="pill" data-target="f2b">Copiar</button></div></div>
+    <div class="row"><div class="label">Agência</div><div class="value" id="f2a">0560</div><div class="actions"><button class="pill" data-target="f2a">Copiar</button></div></div>
+    <div class="row"><div class="label">Operação</div><div class="value" id="f2o">1288</div><div class="actions"><button class="pill" data-target="f2o">Copiar</button></div></div>
+    <div class="row"><div class="label">Conta Poupança</div><div class="value" id="f2c">797464761-3</div><div class="actions"><button class="pill" data-target="f2c">Copiar</button></div></div>
+  </div>
+
+  <!-- PF BB -->
+  <div class="card">
+    <h2>Pessoa Física — Banco do Brasil</h2>
+    <div class="row"><div class="label">Banco</div><div class="value" id="f3b">Banco do Brasil</div><div class="actions"><button class="pill" data-target="f3b">Copiar</button></div></div>
+    <div class="row"><div class="label">Agência</div><div class="value" id="f3a">36-1</div><div class="actions"><button class="pill" data-target="f3a">Copiar</button></div></div>
+    <div class="row"><div class="label">Conta Corrente</div><div class="value" id="f3c">92711-2</div><div class="actions"><button class="pill" data-target="f3c">Copiar</button></div></div>
+  </div>
+
+  <footer>Funciona em celular e desktop. Se o botão não funcionar, toque no campo e use “Copiar”.<br>RF • Cartão interativo de dados para pagamento</footer>
+</div>
+
+<script>
+function fallbackCopy(txt){
+  const ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta);
+  ta.select(); document.execCommand('copy'); ta.remove(); return true;
+}
+async function copyText(txt){
+  try{ await navigator.clipboard.writeText(txt); return true; }catch(e){ return fallbackCopy(txt); }
+}
+function ok(btn){btn.classList.add('ok');const o=btn.textContent;btn.textContent='Copiado ✓';
+  setTimeout(()=>{btn.classList.remove('ok');btn.textContent=o;},1100);}
+document.querySelectorAll('button.pill[data-target]').forEach(b=>{
+  b.addEventListener('click', async ()=>{const id=b.getAttribute('data-target');const v=document.getElementById(id).textContent.trim();
+    const r=await copyText(v); if(r) ok(b);});
+});
+document.getElementById('copy_pix')?.addEventListener('click', async ()=>{
+  const pf=document.getElementById('pixpf').textContent.trim();
+  const pj=document.getElementById('pixpj').textContent.trim();
+  const r=await copyText(`${pf} | ${pj}`); if(r) ok(document.getElementById('copy_pix'));
+});
+</script>
+</body>
+</html>
