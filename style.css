@@ -1,0 +1,10 @@
+:root {
+    --primary-color: #7A67FF;
+    --background-light: #f8f8f8;
+    --text-dark: #333;
+    --text-light: #666;
+    --border-radius: 12px;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+/* restante incluído no arquivo final */
