@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💳 RF — Dados para Pagamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <div class="logo-rf">RF</div>
+        <h1>💳 RF — Dados para Pagamento</h1>
+        <p class="explanation">Toque em 'Copiar' para copiar. Se o navegador bloquear, toque no campo para selecionar e use 'Copiar'.</p>
+
+        <hr class="separator">
+
+        <section class="card">
+            <h3><i class="fas fa-key icon-small"></i> PIX / Chaves</h3>
+            <div class="data-item">
+                <span class="label">PIX (CPF) — Pessoa Física</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="01363714422" id="pix-cpf-pf">
+                    <button class="copy-btn" data-target="pix-cpf-pf">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">PIX (CNPJ) — Pessoa Jurídica</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="15439659000116" id="pix-cnpj-pj">
+                    <button class="copy-btn" data-target="pix-cnpj-pj">Copiar</button>
+                </div>
+            </div>
+            <button class="copy-block-btn" data-block="PIX (CPF) — Pessoa Física: 01363714422%0APX (CNPJ) — Pessoa Jurídica: 15439659000116">Copiar bloco: PIX</button>
+        </section>
+
+        <hr class="separator">
+
+        <section class="card">
+            <h3><i class="fas fa-briefcase icon-small"></i> Pessoa Jurídica — RF Entretenimento LTDA</h3>
+            <div class="data-item">
+                <span class="label">Banco:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="Nu Pagamentos S.A. (0260)" id="pj-rf-banco">
+                    <button class="copy-btn" data-target="pj-rf-banco">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">Agência:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="0001" id="pj-rf-agencia">
+                    <button class="copy-btn" data-target="pj-rf-agencia">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">Conta:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="31455303-8" id="pj-rf-conta">
+                    <button class="copy-btn" data-target="pj-rf-conta">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">PIX (CNPJ):</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="15.439.659/0001-16" id="pj-rf-pix">
+                    <button class="copy-btn" data-target="pj-rf-pix">Copiar</button>
+                </div>
+            </div>
+            <button class="copy-block-btn" data-block="RF Entretenimento LTDA%0ABanco: Nu Pagamentos S.A. (0260)%0AAgência: 0001%0AConta: 31455303-8%0APIX (CNPJ): 15.439.659/0001-16">Copiar bloco: Pessoa Jurídica — RF Entretenimento LTDA</button>
+        </section>
+
+        <hr class="separator">
+
+        <section class="card">
+            <h3><i class="fas fa-briefcase icon-small"></i> Pessoa Jurídica — RF EMPRESA</h3>
+            <div class="data-item">
+                <span class="label">Banco:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="Caixa Econômica Federal" id="pj-rfempresa-banco">
+                    <button class="copy-btn" data-target="pj-rfempresa-banco">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">Agência:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="0560" id="pj-rfempresa-agencia">
+                    <button class="copy-btn" data-target="pj-rfempresa-agencia">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">Conta Corrente:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="739002997-9" id="pj-rfempresa-conta">
+                    <button class="copy-btn" data-target="pj-rfempresa-conta">Copiar</button>
+                </div>
+            </div>
+            <button class="copy-block-btn" data-block="RF EMPRESA%0ABanco: Caixa Econômica Federal%0AAgência: 0560%0AConta Corrente: 739002997-9">Copiar bloco: Pessoa Jurídica — RF EMPRESA</button>
+        </section>
+
+        <hr class="separator">
+
+        <section class="card">
+            <h3><i class="fas fa-user icon-small"></i> Pessoa Física — Renata Falcão</h3>
+            <div class="data-item">
+                <span class="label">Banco:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="Nu Pagamentos S.A. (0260)" id="pf-rfalcao-banco">
+                    <button class="copy-btn" data-target="pf-rfalcao-banco">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">Agência:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="0001" id="pf-rfalcao-agencia">
+                    <button class="copy-btn" data-target="pf-rfalcao-agencia">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">Conta:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="6759278-3" id="pf-rfalcao-conta">
+                    <button class="copy-btn" data-target="pf-rfalcao-conta">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">PIX (CPF):</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="013.637.144-22" id="pf-rfalcao-pix">
+                    <button class="copy-btn" data-target="pf-rfalcao-pix">Copiar</button>
+                </div>
+            </div>
+            <button class="copy-block-btn" data-block="Renata Falcão%0ABanco: Nu Pagamentos S.A. (0260)%0AAgência: 0001%0AConta: 6759278-3%0APIX (CPF): 013.637.144-22">Copiar bloco: Pessoa Física — Renata Falcão</button>
+        </section>
+
+        <hr class="separator">
+
+        <section class="card">
+            <h3><i class="fas fa-piggy-bank icon-small"></i> Pessoa Física — Caixa Econômica Federal (Poupança)</h3>
+            <div class="data-item">
+                <span class="label">Banco:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="Caixa Econômica Federal" id="pf-caixa-banco">
+                    <button class="copy-btn" data-target="pf-caixa-banco">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">Agência:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="0560" id="pf-caixa-agencia">
+                    <button class="copy-btn" data-target="pf-caixa-agencia">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">Operação:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="1288" id="pf-caixa-operacao">
+                    <button class="copy-btn" data-target="pf-caixa-operacao">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">Conta Poupança:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="797464761-3" id="pf-caixa-conta">
+                    <button class="copy-btn" data-target="pf-caixa-conta">Copiar</button>
+                </div>
+            </div>
+            <button class="copy-block-btn" data-block="Caixa Econômica Federal (Poupança)%0ABanco: Caixa Econômica Federal%0AAgência: 0560%0AOperação: 1288%0AConta Poupança: 797464761-3">Copiar bloco: Pessoa Física — Caixa Econômica Federal</button>
+        </section>
+
+        <hr class="separator">
+
+        <section class="card">
+            <h3><i class="fas fa-university icon-small"></i> Pessoa Física — Banco do Brasil</h3>
+            <div class="data-item">
+                <span class="label">Banco:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="Banco do Brasil" id="pf-bb-banco">
+                    <button class="copy-btn" data-target="pf-bb-banco">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">Agência:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="36-1" id="pf-bb-agencia">
+                    <button class="copy-btn" data-target="pf-bb-agencia">Copiar</button>
+                </div>
+            </div>
+            <div class="data-item">
+                <span class="label">Conta Corrente:</span>
+                <div class="copy-field">
+                    <input type="text" readonly value="92711-2" id="pf-bb-conta">
+                    <button class="copy-btn" data-target="pf-bb-conta">Copiar</button>
+                </div>
+            </div>
+            <button class="copy-block-btn" data-block="Banco do Brasil%0ABanco: Banco do Brasil%0AAgência: 36-1%0AConta Corrente: 92711-2">Copiar bloco: Pessoa Física — Banco do Brasil</button>
+        </section>
+
+        <hr class="separator">
+
+        <footer>
+            <p>Funciona em celular e desktop.<br>Se o botão não funcionar, toque no campo e use 'Copiar'.</p>
+            <p>RF • Cartão interativo de dados para pagamento</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

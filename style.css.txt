@@ -1,0 +1,288 @@
+:root {
+    --primary-color: #7A67FF;
+    --background-light: #f8f8f8;
+    --text-dark: #333;
+    --text-light: #666;
+    --border-radius: 12px;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+}
+
+/* Background overlay with lilás details */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, var(--primary-color) 100%);
+    opacity: 0.1; /* Make it subtle */
+    z-index: -1;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-rf {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    opacity: 0.1;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.explanation {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.separator {
+    border: none;
+    border-top: 1px dashed var(--primary-color);
+    opacity: 0.3;
+    margin: 3rem 0;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.icon-small {
+    font-size: 1rem;
+    margin-right: 0.75rem;
+    color: var(--primary-color);
+}
+
+.data-item {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.data-item .label {
+    font-weight: 500;
+    margin-right: 0.5rem;
+    color: var(--text-dark);
+    min-width: 80px; /* Adjust as needed */
+    flex-shrink: 0;
+}
+
+.copy-field {
+    flex-grow: 1;
+    display: flex;
+    gap: 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #e0e0e0;
+}
+
+.copy-field input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    outline: none;
+    cursor: pointer; /* Indicate it's selectable */
+    user-select: text; /* Allow text selection */
+}
+
+.copy-btn, .copy-block-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.copy-btn:hover, .copy-block-btn:hover {
+    background-color: #6a5bff; /* Slightly darker lilás */
+    transform: translateY(-1px);
+}
+
+.copy-block-btn {
+    display: block;
+    width: calc(100% - 1rem); /* Adjust width to fit padding */
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+footer {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+footer p:last-child {
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem auto;
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .explanation {
+        font-size: 0.85rem;
+    }
+
+    .card {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .data-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    .data-item .label {
+        min-width: unset;
+        width: 100%;
+        margin-bottom: 0.2rem;
+    }
+
+    .copy-field {
+        width: 100%;
+        padding: 0.4rem;
+        flex-wrap: nowrap; /* Keep input and button on one line if possible */
+    }
+
+    .copy-field input[type="text"] {
+        font-size: 0.9rem;
+        padding: 0.2rem 0;
+    }
+
+    .copy-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .copy-block-btn {
+        width: calc(100% - 1rem); /* Keep button responsive */
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-rf {
+        font-size: 2.8rem;
+        top: 0.75rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .container {
+        border-radius: 0; /* Full width on smallest screens */
+        box-shadow: none;
+        margin: 0;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .copy-field {
+        flex-direction: column; /* Stack input and button on very small screens */
+        align-items: stretch;
+        gap: 0.3rem;
+        padding: 0.2rem;
+    }
+
+    .copy-btn {
+        width: 100%;
+        margin-top: 0.2rem;
+    }
+}
